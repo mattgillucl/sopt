@@ -90,3 +90,10 @@ add_subdirectory(cpp)
 
 # Exports all Sopt so other packages can access it
 include(export_sopt)
+
+# Stuff added to try and generate a .deb file
+SET(CPACK_GENERATOR "DEB")
+SET(CPACK_DEBIAN_PACKAGE_MAINTAINER "Research Software Development Group <rsdg@ucl.ac.uk>")
+INCLUDE(CPack)
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+set(CPACK_DEBIAN_PACKAGE_GENERATE_SHLIBS ON)
